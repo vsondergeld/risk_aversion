@@ -28,8 +28,8 @@ individuals_utility = partial(
 # Define the monetary payoffs.
 payoffs = [500, -550]
 
-# Set up the calculation of the utility values.
-out = map(individuals_utility, payoffs)
+# Set up the calculation of the utility values via list comprehension.
+out = [individuals_utility(payoff) for payoff in payoffs]
 
 # Carry out the computations and print them to the screen.
 for item in out:
